@@ -1,66 +1,38 @@
-## Foundry
+# YamaAndAlex NFT Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Overview
+`YamaAndAlex` is a Solidity smart contract for creating Non-Fungible Tokens (NFTs) following the ERC721 standard. It extends the OpenZeppelin ERC721 implementation with URI storage and Ownable features, allowing for the creation and management of unique digital assets.
 
-Foundry consists of:
+## Features
+- ERC721 NFT implementation with URI storage.
+- Mint start date functionality to control when NFTs can be minted.
+- Ownable, allowing only the owner to mint new tokens.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Contract Deployment
+To deploy the contract, provide the initial owner's address and the mint start date (as a UNIX timestamp) in the constructor.
 
-## Documentation
+## Contract Functions
+- `safeMint(address to)`: Mints an NFT to the specified address.
+- `currentTokenId()`: Returns the current token ID count, representing the total number of tokens minted.
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+# YamaAndAlex Test Suite
 
-### Build
+## Overview
+This test suite is designed to validate the functionality and enforce the integrity of the `YamaAndAlex` NFT contract. It uses Foundry's testing framework to simulate various scenarios and ensure contract reliability.
 
-```shell
-$ forge build
-```
+## Test Scenarios
+- **Test Safe Minting**: Ensures that NFTs can be minted successfully post the mint start date.
+- **Test Minting Before Start Date**: Verifies that minting cannot occur before the specified start date.
+- **Test Minting By Non-Owner**: Confirms that only the contract owner can mint new tokens.
+- **Test Token ID Increment**: Checks if the token ID is correctly incremented after each mint.
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
+## Running Tests
+To run the tests, execute the following command in the Foundry environment:
 
 ```shell
-$ forge snapshot
+forge test
 ```
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This will run all the defined test cases and output the results, ensuring the `YamaAndAlex` contract behaves as expected under various conditions.
