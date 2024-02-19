@@ -36,3 +36,25 @@ forge test
 ```
 
 This will run all the defined test cases and output the results, ensuring the `YamaAndAlex` contract behaves as expected under various conditions.
+
+## Deployment
+
+
+```shell
+
+# Anvil
+# Take the private key from the startup message of anvil.
+forge create src/YamaAndAlex.sol:YamaAndAlex --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80  --rpc-url $ANVIL_LOCAL 
+
+# sepolia testnet
+forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY  --rpc-url $SEPOLIA_TESTNET
+
+# Mainnet
+forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY --rpc-url $ETHEREUM_MAINNET --gas-price 50000000000
+
+
+
+
+                                                                                                             
+```
+
