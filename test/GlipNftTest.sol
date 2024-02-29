@@ -2,14 +2,14 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
-import "../src/YamaAndAlex.sol";
+import "../src/GlipNft.sol";
 
 /**
- * @title Test suite for the YamaAndAlex NFT contract
- * @dev Implements testing for all functionalities of the YamaAndAlex contract
+ * @title Test suite for the GlipNft.sol NFT contract
+ * @dev Implements testing for all functionalities of the GlipNft.sol contract
  */
-contract YamaAndAlexTest is Test {
-    YamaAndAlex yamaAndAlex;
+contract GlipNftTest is Test {
+    GlipNft yamaAndAlex;
     address testAddress = address(0x123);
 
 
@@ -20,17 +20,14 @@ contract YamaAndAlexTest is Test {
      * @dev Setup function to initialize contract instance before each test
      */
     function setUp() public {
-        // Initialize the contract with the mint start date set to the past
-        yamaAndAlex = new YamaAndAlex();
+        yamaAndAlex = new GlipNft();
     }
 
 
     function testSetup() public {
-
     }
 
     function testDeploy() public {
-
     }
 
 

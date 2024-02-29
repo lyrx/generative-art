@@ -5,12 +5,12 @@ import "openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721URIStorag
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
- * @title YamaAndAlex NFT Contract
+ * @title GlipNft.sol NFT Contract
  */
-contract YamaAndAlex is ERC721 {
+contract GlipNft is ERC721 {
 
 
-    constructor() ERC721("YamaAndAlex", "YAA")  {
+    constructor() ERC721("GlipNft", "GLN")  {
 
     }
 

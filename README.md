@@ -1,7 +1,7 @@
-# YamaAndAlex NFT Contract
+# GLIP NFT Contract
 
 ## Overview
-`YamaAndAlex` is a Solidity smart contract for creating Non-Fungible Tokens (NFTs) following the ERC721 standard. It extends the OpenZeppelin ERC721 implementation with URI storage and Ownable features, allowing for the creation and management of unique digital assets.
+`GLIP` is a Solidity smart contract for creating Non-Fungible Tokens (NFTs) following the ERC721 standard. It extends the OpenZeppelin ERC721 implementation with URI storage and Ownable features, allowing for the creation and management of unique digital assets.
 
 ## Features
 - ERC721 NFT implementation with URI storage.
@@ -17,10 +17,10 @@ To deploy the contract, provide the initial owner's address and the mint start d
 
 ---
 
-# YamaAndAlex Test Suite
+# GLIP Test Suite
 
 ## Overview
-This test suite is designed to validate the functionality and enforce the integrity of the `YamaAndAlex` NFT contract. It uses Foundry's testing framework to simulate various scenarios and ensure contract reliability.
+This test suite is designed to validate the functionality and enforce the integrity of the `GLIP` NFT contract. It uses Foundry's testing framework to simulate various scenarios and ensure contract reliability.
 
 ## Test Scenarios
 - **Test Safe Minting**: Ensures that NFTs can be minted successfully post the mint start date.
@@ -35,7 +35,7 @@ To run the tests, execute the following command in the Foundry environment:
 forge test
 ```
 
-This will run all the defined test cases and output the results, ensuring the `YamaAndAlex` contract behaves as expected under various conditions.
+This will run all the defined test cases and output the results, ensuring the `GLIP` contract behaves as expected under various conditions.
 
 ## Deployment
 
@@ -44,13 +44,13 @@ This will run all the defined test cases and output the results, ensuring the `Y
 
 # Anvil
 # Take the private key from the startup message of anvil.
-forge create src/YamaAndAlex.sol:YamaAndAlex --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80  --rpc-url $ANVIL_LOCAL 
+forge create src/GlipNft.sol.sol:GlipNft.sol --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80  --rpc-url $ANVIL_LOCAL 
 
 # sepolia testnet
-forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY  --rpc-url $SEPOLIA_TESTNET
+forge create src/GlipNft.sol:GlipNft.sol --private-key $PRIVATE_KEY  --rpc-url $SEPOLIA_TESTNET
 
 
-forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY --rpc-url $SEPOLIA_TESTNET
+forge create src/GlipNft.sol:GlipNft.sol --private-key $PRIVATE_KEY --rpc-url $SEPOLIA_TESTNET
 
 Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
 Deployed to: 0x84a5Be9aaEab6f90Ca10fc49F941348ab744a9b0
@@ -59,7 +59,7 @@ Transaction hash: 0xa5003db6fceac7ea28dbfe9102b16572757381516f1cb2ba0c8d50572343
 
 
 # Mainnet
-forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY --rpc-url $ETHEREUM_MAINNET --gas-price 50000000000
+forge create src/GlipNft.sol.sol:GlipNft.sol --private-key $PRIVATE_KEY --rpc-url $ETHEREUM_MAINNET --gas-price 50000000000
 
 
 
