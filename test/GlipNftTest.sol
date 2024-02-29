@@ -9,26 +9,35 @@ import "../src/GlipNft.sol";
  * @dev Implements testing for all functionalities of the GlipNft.sol contract
  */
 contract GlipNftTest is Test {
-    GlipNft yamaAndAlex;
-    address testAddress = address(0x123);
+    GlipNft nftTest;
 
-
-
+    address owner = address(0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c);
+    address nonOwner = address(0x123);
 
 
     /**
      * @dev Setup function to initialize contract instance before each test
      */
     function setUp() public {
-        yamaAndAlex = new GlipNft();
+        nftTest = new GlipNft();
     }
 
-
-    function testSetup() public {
+    function testMintNFT() public {
+        // Simulate being the owner
+        vm.startPrank(owner);
+        uint256 tokenId = nftTest.mintNFT(owner, "tokenURI");
+        assertEq(nftTest.ownerOf(tokenId), owner, "Owner should be the minter.");
+        vm.stopPrank();
     }
 
-    function testDeploy() public {
+    function testFailMintNFTByNonOwner() public {
+        // Attempt to mint by a non-owner, should fail
+        vm.startPrank(nonOwner);
+        nftTest.mintNFT(nonOwner, "tokenURI");
+        // This call should revert, and the test will pass if it does
+        vm.stopPrank();
     }
+
 
 
 
