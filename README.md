@@ -59,6 +59,22 @@ Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
 Deployed to: 0xcfB5f338096c56353FEfD44A146461C21b268CcC
 Transaction hash: 0x0ba2d3e4398d6370f76df48c24d51b38e1b85b194d1fdac7ca5e1d227fb6dddc
 
+forge verify-contract  \
+--chain-id 80001  \
+--num-of-optimizations 200 \
+--etherscan-api-key $ETHERSCAN_API_KEY  \
+--compiler-version v0.8.0+commit.c7dfd78e     \
+0xcfB5f338096c56353FEfD44A146461C21b268CcC  \
+src/GlipNft.sol:GlipNft
+
+
+# Polygon MUMBAI verified
+forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MUMBAI --etherscan-api-key $ETHERSCAN_API_KEY  --verify 
+
+
+
+
+
 
                                                                                                              
 ```
