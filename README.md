@@ -56,9 +56,11 @@ forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $ETHER
 forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MUMBAI 
 
 Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
-Deployed to: 0xcfB5f338096c56353FEfD44A146461C21b268CcC
-Transaction hash: 0x0ba2d3e4398d6370f76df48c24d51b38e1b85b194d1fdac7ca5e1d227fb6dddc
+Deployed to: 0x4658c7983E38f457b8B39555b85E90f7b9E595ca
+Transaction hash: 0x207401e68128b8c9a7740a153b8db5c66b77c87b21085a04dcf36737e9f47917
 
+
+# Verification (Work in progress)
 forge verify-contract  \
 --chain-id 80001  \
 --num-of-optimizations 200 \
