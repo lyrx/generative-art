@@ -2,6 +2,8 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+gas_reports = ["*"]
+
 [profile.dependencies]
 OpenZeppelin="openzeppelin/openzeppelin-contracts@v5.0.0"
 

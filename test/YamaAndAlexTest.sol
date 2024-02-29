@@ -15,6 +15,7 @@ contract YamaAndAlexTest is Test {
 
 
 
+
     /**
      * @dev Setup function to initialize contract instance before each test
      */
@@ -25,6 +26,10 @@ contract YamaAndAlexTest is Test {
 
 
     function testSetup() public {
+
+    }
+
+    function testDeploy() public {
 
     }
 

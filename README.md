@@ -49,6 +49,15 @@ forge create src/YamaAndAlex.sol:YamaAndAlex --private-key 0xac0974bec39a17e36ba
 # sepolia testnet
 forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY  --rpc-url $SEPOLIA_TESTNET
 
+
+forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY --rpc-url $SEPOLIA_TESTNET
+
+Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
+Deployed to: 0x84a5Be9aaEab6f90Ca10fc49F941348ab744a9b0
+Transaction hash: 0xa5003db6fceac7ea28dbfe9102b16572757381516f1cb2ba0c8d50572343807c
+
+
+
 # Mainnet
 forge create src/YamaAndAlex.sol:YamaAndAlex --private-key $PRIVATE_KEY --rpc-url $ETHEREUM_MAINNET --gas-price 50000000000
 
