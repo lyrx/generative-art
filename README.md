@@ -42,24 +42,6 @@ This will run all the defined test cases and output the results, ensuring the `G
 
 ```shell
 
-# Anvil
-# Take the private key from the startup message of anvil.
-forge create src/GlipNft.sol:GlipNft --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80  --rpc-url $ANVIL_LOCAL 
-
-# sepolia testnet
-forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $SEPOLIA_TESTNET
-
-# Mainnet
-forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $ETHEREUM_MAINNET --gas-price 50000000000
-
-# Polygon MUMBAI
-forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MUMBAI 
-
-Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
-Deployed to: 0x4658c7983E38f457b8B39555b85E90f7b9E595ca
-Transaction hash: 0x207401e68128b8c9a7740a153b8db5c66b77c87b21085a04dcf36737e9f47917
-
-
 # Verification (Work in progress)
 forge verify-contract  \
 --chain-id 80001  \
@@ -70,10 +52,18 @@ forge verify-contract  \
 src/GlipNft.sol:GlipNft
 
 
-# Polygon MUMBAI verified
-forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MUMBAI --etherscan-api-key $ETHERSCAN_API_KEY  --verify 
+# Polygon MUMBAI unverified
+forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MUMBAI 
+Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
+Deployed to: 0x1F344957f6E4B3fAc9e29d772d2E1e4a123041cd
+Transaction hash: 0x9207e6900ebb782e2c22d77ada2ac3fa989eeb9c649909247f275e7bf089bf60
 
+# Polygon MAINNET unverified
+forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MAINNET 
 
+Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
+Deployed to: 0xE12b9421D8b771BBfA67779e9d89Ee18054735aB
+Transaction hash: 0x8ef912b256e8efca61ecedbe011ab51df898217ad71c40e553fe60b8df9295c3
 
 
 
