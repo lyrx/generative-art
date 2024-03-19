@@ -759,23 +759,12 @@ This will run all the defined test cases and output the results, ensuring the `G
 # BASE: Get balance
 cast balance $PUBLIC_KEY --rpc-url $BASE
 
-# Polygon MAINNET unverified
+# BASE unverified
 forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $BASE 
 
 Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
 Deployed to: 0xc36b1A1f7f0447c5860B902DEB4eB8c9F1f7A4b4
 Transaction hash: 0x00289a14cda63ff04dbe06a09ded08a1ce400c25a15919cbc24543fd0c76252a
-
-
-# Verification (Work in progress)
-forge verify-contract  \
---chain-id 80001  \
---num-of-optimizations 200 \
---etherscan-api-key $ETHERSCAN_API_KEY  \
---compiler-version v0.8.0+commit.c7dfd78e     \
-0xcfB5f338096c56353FEfD44A146461C21b268CcC  \
-src/GlipNft.sol:GlipNft
-
 
 # Polygon MUMBAI unverified
 forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MUMBAI 
@@ -789,9 +778,6 @@ forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYG
 Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
 Deployed to: 0xE12b9421D8b771BBfA67779e9d89Ee18054735aB
 Transaction hash: 0x8ef912b256e8efca61ecedbe011ab51df898217ad71c40e553fe60b8df9295c3
-
-
-
 
                                                                                                              
 ```
