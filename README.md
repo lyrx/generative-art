@@ -755,6 +755,18 @@ This will run all the defined test cases and output the results, ensuring the `G
 
 ```shell
 
+
+# BASE: Get balance
+cast balance $PUBLIC_KEY --rpc-url $BASE
+
+# Polygon MAINNET unverified
+forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $BASE 
+
+Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
+Deployed to: 0xc36b1A1f7f0447c5860B902DEB4eB8c9F1f7A4b4
+Transaction hash: 0x00289a14cda63ff04dbe06a09ded08a1ce400c25a15919cbc24543fd0c76252a
+
+
 # Verification (Work in progress)
 forge verify-contract  \
 --chain-id 80001  \
