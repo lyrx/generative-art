@@ -804,6 +804,22 @@ Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
 Deployed to: 0xE12b9421D8b771BBfA67779e9d89Ee18054735aB
 Transaction hash: 0x8ef912b256e8efca61ecedbe011ab51df898217ad71c40e553fe60b8df9295c3
 
+
+# Polygon MAINNET flattened and verified:
+forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_MAINNET 
+
+Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
+Deployed to: 0xe264085795e13334D5d386C5E3B46795E380a815
+Transaction hash: 0x845c80698942ea8721737568b8fc10d88c7b9304b61e2b33dea854968261415d
+
                                                                                                              
 ```
+
+Use `forge flatten` to flatten the sources, and then `forge config` to find out about the solc compiler
+settings being used by forge when doing the compilation. 
+
+I redeployed the flattened contract. I then used 
+[polygonscan](https://polygonscan.com) to verify the single file (flattened)
+contract. I had to use the values for the compiler settings (test runs, target version, ...)
+when filling out the form.
 
