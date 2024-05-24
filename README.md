@@ -8,14 +8,39 @@
 - Mint start date functionality to control when NFTs can be minted.
 - Ownable, allowing only the owner to mint new tokens.
 
-## Contract Deployment
-To deploy the contract, provide the initial owner's address and the mint start date (as a UNIX timestamp) in the constructor.
+## Setup
 
-## Contract Functions
-- `safeMint(address to)`: Mints an NFT to the specified address.
-- `currentTokenId()`: Returns the current token ID count, representing the total number of tokens minted.
+```shell
+. env.sh
+# env.sh is not checked in
 
----
+```
+env.sh:
+```shell
+
+PUBLIC_KEY=
+PRIVATE_KEY=
+INFURA_API_KEY=
+SEPOLIA_TESTNET=
+GOERLI_TESTNET=
+ETHEREUM_MAINNET=
+POLYGON_MAINNET=
+POLYGON_MUMBAI=
+ETHERSCAN_API_KEY=5
+BASE="https://base-rpc.publicnode.com"
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.foundry/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm use v20.10.0
+
+
+```
+
 
 # GLIP Test Suite
 
