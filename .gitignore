@@ -15,3 +15,4 @@ docs/
 .idea/
 env.sh
 pk.sh
+forgeconfig.txt
