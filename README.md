@@ -812,6 +812,15 @@ Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
 Deployed to: 0xe264085795e13334D5d386C5E3B46795E380a815
 Transaction hash: 0x845c80698942ea8721737568b8fc10d88c7b9304b61e2b33dea854968261415d
 
+# Polygon AMOY flattened and unverified:
+# Block explorer: https://amoy.polygonscan.com/ 
+
+forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_AMOY 
+
+Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
+Deployed to: 0xcfB5f338096c56353FEfD44A146461C21b268CcC
+Transaction hash: 0x2c2e73c6b09413c52eca8161667fa205d083784eba067717534583c2a0d1a407
+
                                                                                                              
 ```
 
