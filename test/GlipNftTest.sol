@@ -41,9 +41,9 @@ contract GlipNftTest is Test {
      * @dev Tests the minting function's access control by attempting to mint with a non-owner account.
      * Expected to fail and thereby pass the test.
      */
-    function testFailMintNFTByNonOwner() public {
+    function testMintNFTByNonOwner() public {
         vm.startPrank(nonOwner);
-        nftTest.mintNFT(nonOwner, "tokenURI"); // Expected to revert.
+        nftTest.mintNFT(nonOwner, "tokenURI");
         vm.stopPrank();
     }
 

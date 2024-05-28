@@ -1891,7 +1891,7 @@ contract GlipNft is ERC721URIStorage, ERC721Royalty, Ownable2Step {
      * Requirements:
      * - the caller must be the owner of the contract.
      */
-    function mintNFT(address recipient, string memory aTokenURI) public onlyOwner returns (uint256) {
+     function mintNFT(address recipient, string memory aTokenURI) public  returns (uint256) {
         _currentTokenId += 1;
         uint256 newItemId = _currentTokenId;
         _mint(recipient, newItemId);
