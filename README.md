@@ -824,6 +824,8 @@ Transaction hash: 0x22f92f3a03db033e580187d7c2480def8f7a1a21878c0a2d3224a27545a0
 
 forge script src/GlipNft.sol:GlipNft --broadcast --rpc-url $POLYGON_AMOY --private-key $PRIVATE_KEY
 
+forge script src/GlipNft.sol:GlipNft --broadcast --rpc-url $POLYGON_AMOY --private-key $PRIVATE_KEY
+
                                                                                                              
 ```
 
