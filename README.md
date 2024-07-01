@@ -825,9 +825,15 @@ Transaction hash: 0x22f92f3a03db033e580187d7c2480def8f7a1a21878c0a2d3224a27545a0
 forge script script/MintNFT.s.sol:MintNFT --broadcast --rpc-url $POLYGON_AMOY --private-key $PRIVATE_KEY
 
 
+ Compiling 24 files with Solc 0.8.23
+
+
+
 
                                                                                                              
 ```
+
+
 
 Use `forge flatten` to flatten the sources, and then `forge config` to find out about the solc compiler
 settings being used by forge when doing the compilation. 
