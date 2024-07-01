@@ -821,6 +821,8 @@ Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
 Deployed to: 0xcfB5f338096c56353FEfD44A146461C21b268CcC
 Transaction hash: 0x2c2e73c6b09413c52eca8161667fa205d083784eba067717534583c2a0d1a407
 
+forge script src/GlipNft.sol:GlipNft --broadcast --rpc-url $POLYGON_AMOY --private-key $PRIVATE_KEY
+
                                                                                                              
 ```
 

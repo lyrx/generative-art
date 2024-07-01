@@ -32,7 +32,7 @@ contract GlipNftTest is Test {
      */
     function testMintNFT() public {
         vm.startPrank(owner);
-        uint256 tokenId = nftTest.mintNFT(owner, "tokenURI");
+        uint256 tokenId = nftTest.mintNFT(owner, "https://api.glip.market/api/openai/ebooks/metadata?id=31749955b9d55c0891a6ba271e1b6f2fc3a80dde1d42720b34ffb844781a118f");
         assertEq(nftTest.ownerOf(tokenId), owner, "Owner should be the minter.");
         vm.stopPrank();
     }
