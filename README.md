@@ -779,6 +779,8 @@ This will run all the defined test cases and output the results, ensuring the `G
 
 
 ```shell
+# A test script
+forge script script/MintNFT.s.sol:MintNFT --broadcast --rpc-url $POLYGON_AMOY --private-key $PRIVATE_KEY
 
 
 # BASE: Get balance
@@ -818,19 +820,8 @@ Transaction hash: 0x845c80698942ea8721737568b8fc10d88c7b9304b61e2b33dea854968261
 forge create src/GlipNft.sol:GlipNft --private-key $PRIVATE_KEY --rpc-url $POLYGON_AMOY 
 
 Deployer: 0x977583aA8aaFEE37f60A1eee8eB273a1dF05F57c
-Deployed to: 0x5d1fE9DE7FA153C47F2a39D5B00CdfC141e7079c
-Transaction hash: 0x22f92f3a03db033e580187d7c2480def8f7a1a21878c0a2d3224a27545a0be53
-
-
-forge script script/MintNFT.s.sol:MintNFT --broadcast --rpc-url $POLYGON_AMOY --private-key $PRIVATE_KEY
-
-
- Compiling 24 files with Solc 0.8.23
-
-
-
-
-                                                                                                             
+Deployed to: 0xDaA7A1232b924b25eCf6E2007779c6594886156A
+Transaction hash: 0x37939d661d7ab6d76ccbcf0a50d826e975074e822f27057f0b0e969c8ef3b41d                                                                                          
 ```
 
 
